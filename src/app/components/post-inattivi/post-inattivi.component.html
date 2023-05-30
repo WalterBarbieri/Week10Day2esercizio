@@ -1,0 +1,12 @@
+<div class="container">
+  <div *ngFor="let post of posts">
+    <div *ngIf="!post.active" class="card mb-5">
+      <h5 class="card-header">Post</h5>
+      <div class="card-body">
+        <h5 class="card-title">{{ post.title }}</h5>
+        <p class="card-text">{{ post.body }}</p>
+        <p class="card-text text-muted">{{ post.id }}</p>
+      </div>
+    </div>
+  </div>
+</div>
