@@ -12,14 +12,18 @@ export class PostAttiviComponent implements OnInit {
   posts!: Post[];
 
   constructor(private postsSrv: PostsServicesService) {
+
+  }
+
+  ngOnInit(): void {
     this.postsSrv.getIt().then((data) => {
       this.posts = data;
       console.log(this.posts);
 
     });
   }
-
-  ngOnInit(): void {
+  disable(post:Post) {
+    post.active = false;
   }
 
 }

@@ -12,6 +12,10 @@ export class PostInattiviComponent implements OnInit {
   posts!: Post[];
 
   constructor(private postsSrv: PostsServicesService) {
+
+  }
+
+  ngOnInit(): void {
     this.postsSrv.getIt().then((data) => {
       this.posts = data;
       console.log(this.posts);
@@ -19,7 +23,8 @@ export class PostInattiviComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {
+  enable(post:Post) {
+    post.active = true;
   }
 
 }

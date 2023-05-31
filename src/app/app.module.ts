@@ -9,6 +9,7 @@ import { HomeComponent } from './components/home/home.component';
 import { PostAttiviComponent } from './components/post-attivi/post-attivi.component';
 import { PostInattiviComponent } from './components/post-inattivi/post-inattivi.component';
 
+
 const routes: Route[] = [ // Creazione di una costante basata sull'interfaccia Route che contiene i percorsi di attivazione dei componenti
     {
         path: '', // Percorso che sarà indicato nel link
@@ -31,7 +32,7 @@ const routes: Route[] = [ // Creazione di una costante basata sull'interfaccia R
     NavbarComponent,
     HomeComponent,
     PostAttiviComponent,
-    PostInattiviComponent
+    PostInattiviComponent,
   ],
   imports: [
     BrowserModule,
